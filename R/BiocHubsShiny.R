@@ -37,6 +37,7 @@
 #'   browser
 #'
 #' @import shiny AnnotationHub ExperimentHub
+#' @importFrom utils write.table
 #'
 #' @examples
 #' if (interactive()) {
