@@ -30,6 +30,8 @@ Imports:
 Suggests:
     BiocManager,
     BiocStyle,
+    curl,
+    glue,
     knitr,
     rmarkdown,
     sessioninfo,
