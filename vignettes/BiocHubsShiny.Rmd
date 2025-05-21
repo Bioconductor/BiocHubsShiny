@@ -22,15 +22,6 @@ knitr::opts_chunk$set(
     cache = TRUE,
     out.width = "100%"
 )
-BHSimagePath <- function(name, branch = "devel") {
-    if (curl::has_internet())
-        glue::glue(
-            "https://github.com/Bioconductor/BiocHubsShiny/blob/{branch}",
-            "/vignettes/figures/{name}?raw=true"
-        )
-    else
-        glue::glue("figures/{name}")
-}
 ```
 
 # BiocHubsShiny
@@ -64,9 +55,7 @@ BiocHubsShiny()
 ```
 
 ```{r,echo=FALSE}
-knitr::include_graphics(
-    BHSimagePath("BiocHubsShiny.png")
-)
+knitr::include_graphics("figures/BiocHubsShiny.png")
 ```
 
 # Filtering
@@ -75,9 +64,7 @@ You can filter by any of the columns in the table. For example, you can search
 for 'Mus musculus' to get resources only for that species:
 
 ```{r,echo=FALSE}
-knitr::include_graphics(
-    BHSimagePath("MusMusculus.png")
-)
+knitr::include_graphics("figures/MusMusculus.png")
 ```
 
 # Selection
@@ -86,9 +73,7 @@ Click on the rows to select the resources. They will show up as highlighted
 rows.
 
 ```{r,echo=FALSE}
-knitr::include_graphics(
-    BHSimagePath("MusMusculusSelection.png")
-)
+knitr::include_graphics("figures/MusMusculusSelection.png")
 ```
 
 # Import
@@ -98,9 +83,7 @@ will be updated to show the commands for entering (reproducibly) into
 the R session. 
 
 ```{r,echo=FALSE}
-knitr::include_graphics(
-    BHSimagePath("MusMusculusCode.png")
-)
+knitr::include_graphics("figures/MusMusculusCode.png")
 ```
 
 # Session Info
