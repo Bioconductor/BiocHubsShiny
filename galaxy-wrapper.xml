@@ -1,0 +1,27 @@
+<tool id="interactivetool_biocshiny_biochubsshiny" tool_type="interactive" name="BiocHubsShiny" version="0.1.0">
+    <description>BiocHubsShiny App</description>
+    <requirements>
+        <container type="docker">docker.io/mr148/biochubsshiny:latest</container>
+    </requirements>
+    <interact type="web" file="biocshiny.html" />
+    <entry_points>
+        <entry_point name="biochubsshiny_app" requires_domain="True">
+            <port>3838</port>
+            <url>/</url>
+        </entry_point>
+    </entry_points>
+    <environment_variables>
+        <environment_variable name="HISTORY_ID">$__history_id__</environment_variable>
+        <environment_variable name="REMOTE_HOST">$__galaxy_url__</environment_variable>
+        <environment_variable name="GALAXY_WEB_PORT">8080</environment_variable>
+        <environment_variable name="GALAXY_URL">$__galaxy_url__</environment_variable>
+        <environment_variable name="DEBUG">true</environment_variable>
+        <environment_variable name="API_KEY" inject="api_key" />
+    </environment_variables>
+    <command detect_errors="aggressive">
+        Rscript '$__tool_directory__/app.R'
+    </command>
+    <help>
+        This is an auto-generated wrapper for a BiocShiny application. See source and report issues at https://github.com/Bioconductor/BiocHubsShiny.
+    </help>
+</tool>

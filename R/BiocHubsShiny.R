@@ -342,5 +342,8 @@ BiocHubsShiny <- function(...) {
         })
     }
 
-    shinyApp(ui, server, ...)
+    runApp(
+           shinyApp(ui, server),
+           ...
+    )
 }
