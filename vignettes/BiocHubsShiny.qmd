@@ -5,24 +5,14 @@ author:
   affiliation: "CUNY Graduate School of Public Health and Health Policy, New York, NY USA"
 - name: Vincent J. Carey
   affiliation: "Channing Lab, Brigham and Womens Hospital, Harvard University, Boston, MA USA"
+date: last-modified
+format: html
 package: BiocHubsShiny
-output:
-  BiocStyle::html_document:
-    toc: false
 vignette: >
   %\VignetteIndexEntry{BiocHubsShiny Overview}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
-
-```{r setup, include=FALSE,echo=FALSE}
-knitr::opts_chunk$set(
-    collapse = TRUE,
-    comment = "#>",
-    cache = TRUE,
-    out.width = "100%"
-)
-```
 
 # BiocHubsShiny
 
@@ -33,16 +23,23 @@ fields.
 
 # Installation
 
-```{r,eval=FALSE}
+```{r}
+#| eval: false
+
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-
 BiocManager::install("BiocHubsShiny")
 ```
 
+
 # Loading the package
 
-```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
+```{r}
+#| include: true
+#| results: "hide"
+#| message: false
+#| warning: false
+
 library(BiocHubsShiny)
 ```
 
@@ -50,11 +47,15 @@ library(BiocHubsShiny)
 
 Resources are displayed interactively using the eponymous function:
 
-```{r,eval=FALSE}
+```{r}
+#| eval: false
+
 BiocHubsShiny()
 ```
 
-```{r,echo=FALSE}
+```{r}
+#| echo: false
+
 knitr::include_graphics("figures/BiocHubsShiny.png")
 ```
 
@@ -63,7 +64,8 @@ knitr::include_graphics("figures/BiocHubsShiny.png")
 You can filter by any of the columns in the table. For example, you can search
 for 'Mus musculus' to get resources only for that species:
 
-```{r,echo=FALSE}
+```{r}
+#| echo: false
 knitr::include_graphics("figures/MusMusculus.png")
 ```
 
@@ -72,7 +74,8 @@ knitr::include_graphics("figures/MusMusculus.png")
 Click on the rows to select the resources. They will show up as highlighted
 rows.
 
-```{r,echo=FALSE}
+```{r}
+#| echo: false
 knitr::include_graphics("figures/MusMusculusSelection.png")
 ```
 
@@ -82,7 +85,8 @@ Once the selection is highlighted, the code at the bottom of the app
 will be updated to show the commands for entering (reproducibly) into
 the R session. 
 
-```{r,echo=FALSE}
+```{r}
+#| echo: false
 knitr::include_graphics("figures/MusMusculusCode.png")
 ```
 
@@ -91,4 +95,3 @@ knitr::include_graphics("figures/MusMusculusCode.png")
 ```{r}
 sessionInfo()
 ```
-
