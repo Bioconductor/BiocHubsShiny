@@ -58,7 +58,6 @@ BiocHubsShiny <- function(...) {
             )
         ),
         theme = shinythemes::shinytheme("simplex"),
-        shinytoastr::useToastr(),
         # https://stackoverflow.com/questions/53616176/
         # shiny-use-validate-inside-downloadhandler
         shinyjs::useShinyjs(),
@@ -140,7 +139,9 @@ BiocHubsShiny <- function(...) {
                         textOutput("snapshotdate"),
                         hr(),
                         fluidRow(
-                            DT::dataTableOutput('tbl')
+                            shinybiocloader::withLoader(
+                                DT::dataTableOutput('tbl')
+                            )
                         ),
                         hr(),
                         fluidRow(
@@ -182,10 +183,6 @@ BiocHubsShiny <- function(...) {
             hub
         })
         hub_obj <- reactive({
-            # let the user know that action is ongoing during loading
-            shinytoastr::toastr_info(
-                "retrieving *Hub data...", timeOut=3000
-            )
             hub <- hub_data()
             md <- S4Vectors::mcols(hub)
             ans <- as.data.frame(md)
@@ -213,12 +210,6 @@ BiocHubsShiny <- function(...) {
         # table rendering
         output$tbl <- DT::renderDataTable(
             {
-                shinytoastr::toastr_info(
-                    "preparing *Hub data...", timeOut=4500
-                )
-                on.exit({
-                    shinytoastr::toastr_info("done.", timeOut=2500)
-                })
                 hub_obj()
             },
             server = TRUE,

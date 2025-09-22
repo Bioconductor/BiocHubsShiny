@@ -23,9 +23,9 @@ Imports:
     rclipboard,
     S4Vectors,
     shinyAce,
+    shinybiocloader,
     shinyjs,
     shinythemes,
-    shinytoastr,
     utils
 Suggests:
     BiocManager,
@@ -42,5 +42,5 @@ BugReports: https://github.com/Bioconductor/BiocHubsShiny/issues
 URL: https://github.com/Bioconductor/BiocHubsShiny
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Date: 2025-04-07
