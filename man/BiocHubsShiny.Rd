@@ -15,8 +15,8 @@ browser
 }
 \description{
 The shiny app will allow the user to view a table of either
-\link[AnnotationHub:AnnotationHub-class]{AnnotationHub} or
-\link[ExperimentHub:ExperimentHub-class]{ExperimentHub} resources depending on
+\link[AnnotationHub:AnnotationHub]{AnnotationHub} or
+\link[ExperimentHub:ExperimentHub]{ExperimentHub} resources depending on
 the sidebar selection. It provides example code for downloading the
 selected resources.
 }
