@@ -1,7 +1,7 @@
 Package: BiocHubsShiny
 Type: Package
 Title: View AnnotationHub and ExperimentHub Resources Interactively
-Version: 1.13.0
+Version: 1.13.1
 Authors@R: c( 
     person("Marcel", "Ramos", , "marcel.ramos@sph.cuny.edu",
       c("aut", "cre"), c(ORCID = "0000-0002-3242-0582")
@@ -42,5 +42,5 @@ BugReports: https://github.com/Bioconductor/BiocHubsShiny/issues
 URL: https://github.com/Bioconductor/BiocHubsShiny
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
-Date: 2025-09-22
+Date: 2026-05-21
 Config/roxygen2/version: 8.0.0
