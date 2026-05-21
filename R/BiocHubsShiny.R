@@ -274,16 +274,25 @@ BiocHubsShiny <- function(...) {
                 biochub <- hub_obj()
                 value <- biochub[idx, ]
                 oname <- paste0(substr(tolower(input$hub), 1, 1), "h_meta")
-                if (exists(oname))
-                    warning("Overwriting existing '", oname, "'")
-                message("Setting '", oname, "' in .GlobalEnv")
-                cat(
-                    "To save as text file, run:\n",
-                    "  write.table(", oname, ", file = '", oname, ".txt')\n",
-                    sep = ""
-                )
-                if (!identical(unname(Sys.info()["nodename"]), "shiny"))
+                if (interactive()) {
+                    message("Setting '", oname, "' in .GlobalEnv...")
+                    if (exists(oname))
+                        warning("Overwriting existing '", oname, "'")
                     assign(oname, value, envir = .GlobalEnv)
+                    cat(
+                        "To save as text file, run:\n",
+                        "  write.table(", oname, ", file = '", oname, ".txt')\n",
+                        sep = ""
+                    )
+                } else {
+                    showNotification(
+                        paste0(
+                            "Run the app locally to send '",
+                            oname, "' to your workspace."
+                        ),
+                        type = "message"
+                    )
+                }
             }
         )
 
