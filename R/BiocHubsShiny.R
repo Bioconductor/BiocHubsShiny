@@ -66,11 +66,7 @@ BiocHubsShiny <- function(...) {
             windowTitle = "BiocHubsShiny",
             title = div(
                 img(
-                    src = system.file(
-                        "images",
-                        "bioconductor_logo_rgb_small.png",
-                        package = "BiocHubsShiny"
-                    ),
+                    src = "images/bioconductor_logo_rgb_small.png",
                     align = "right",
                     style = "margin-right:10px"
                 ),

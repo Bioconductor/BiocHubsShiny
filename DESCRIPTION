@@ -43,4 +43,4 @@ URL: https://github.com/Bioconductor/BiocHubsShiny
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Date: 2026-05-21
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.1
