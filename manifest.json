@@ -205,8 +205,8 @@
       }
     },
     "BiocHubsShiny": {
-      "Source": "Bioconductor",
-      "Repository": "https://bioconductor.org/packages/3.23/bioc",
+      "Source": "github",
+      "Repository": null,
       "description": {
         "Package": "BiocHubsShiny",
         "Type": "Package",
@@ -226,17 +226,21 @@
         "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.3",
         "Date": "2025-09-22",
-        "git_url": "https://git.bioconductor.org/packages/BiocHubsShiny",
-        "git_branch": "RELEASE_3_23",
-        "git_last_commit": "334f695",
-        "git_last_commit_date": "2026-04-28",
-        "Repository": "Bioconductor 3.23",
-        "Date/Publication": "2026-04-28",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "BiocHubsShiny",
+        "RemoteUsername": "Bioconductor",
+        "RemoteRef": "deploy-3.23",
+        "RemoteSha": "ccf08ba647cd300c25bdb3b1ec978bb59f6beffb",
+        "GithubRepo": "BiocHubsShiny",
+        "GithubUsername": "Bioconductor",
+        "GithubRef": "deploy-3.23",
+        "GithubSHA1": "ccf08ba647cd300c25bdb3b1ec978bb59f6beffb",
         "NeedsCompilation": "no",
-        "Packaged": "2026-04-28 20:53:10 UTC; biocbuild",
+        "Packaged": "2026-11-23 20:00:14 UTC; mramos",
         "Author": "Marcel Ramos [aut, cre] (ORCID:\n    <https://orcid.org/0000-0002-3242-0582>),\n  Vincent Carey [ctb]",
         "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>",
-        "Built": "R 4.6.1; ; 2026-11-23 19:13:20 UTC; unix"
+        "Built": "R 4.6.1; ; 2026-11-23 20:00:15 UTC; unix"
       }
     },
     "BiocManager": {
